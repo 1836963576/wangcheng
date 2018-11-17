@@ -2,8 +2,8 @@
     <div style="">
         <div style="height: 50px;" >
             <table class="tableList"><tr>
-                <td style="text-align: left" @click="goOne">《 返回</td>
-                    <td>综合资讯</td>
+                <td style="text-align: left;width: 109px" @click="goOne">《 返回</td>
+                    <td style="font-size: 18px;font-weight: 600">综合资讯</td>
                     <td style="text-align: right">
                         <img src="@/assets/image/sS.png" style="height: 20px;width: 20px;"> </td>
                 </tr>

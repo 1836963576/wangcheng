@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
-import vTime from "./views/vTime.vue";
+import topBox from "./views/topBox.vue";
 import vOne from "./views/vOne.vue";
 import vSecend from "./views/vSecend.vue";
 import vThird from "./views/vThird.vue";
@@ -15,14 +15,9 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "vOne",
-      component: vOne
-    },
-
-    {
-      path: "/vTime",
-      name: "vTime",
-      component: vTime,
+      name: "mainBox",
+      component: mainBox,
+        redirect:"/vOne",
       children: [
         {
           path: "/vOne",
@@ -40,6 +35,12 @@ export default new Router({
           component: vThird
         }
       ]
+    },
+
+    {
+      path: "/topBox",
+      name: "topBox",
+      component: topBox
     },
 
     {

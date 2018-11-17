@@ -2,9 +2,10 @@
     <template>
 
         <div class="topHead">
+            <div >
             <div style="height: 30px;width: 30px">
                 <img src="@/assets/image/slh.png" alt="" style="height: 30px;width: 30px">
-            </div>
+            </div >
 
             <div style="height: 30px;width: 80px">
                 <span style="height: 30px;font-size: 18px;line-height: 30px;">中国移动</span>
@@ -21,16 +22,14 @@
             </div>
             <div style="height: 30px;width: 30px">
                 <img src="@/assets/image/dian.png" alt="" style="height: 30px;width: 30px">
-            </div>
-            <mainBox></mainBox>
-            <footsBox></footsBox>
+            </div></div>
+
 
         </div>
 
     </template>
     <script>
-import mainBox from "@/views/mainBox.vue";
-import footsBox from "@/views/footsBox.vue";
+
 import moment from "moment";
 const times = moment().format("hh:mm");
 export default {
@@ -39,10 +38,7 @@ export default {
       timess: times
     };
   },
-  components: {
-    footsBox,
-    mainBox
-  },
+
   methods: {}
 };
 </script>
@@ -51,13 +47,13 @@ export default {
   width: 500px;
   height: 30px;
   /*border: 1px black solid;*/
-  margin-left: 300px;
+
   z-index: 10;
   background: #fff;
   top: 0;
   left: 0;
 }
-.topHead > div {
-  float: left;
+.topHead > div>div {
+float: left;
 }
 </style>

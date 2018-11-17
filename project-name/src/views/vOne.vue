@@ -1,7 +1,8 @@
 <!--suppress ALL -->
 <template xmlns="http://www.w3.org/1999/html">
     <div>
-        <p>首页</p><p @click="zHZX" style="color: #blue;">综合资讯</p>
+        <div style="font-size: 18px;font-weight: 600">首页</div>
+        <el-button @click="zHZX" type="primary" >综合资讯</el-button>
     <div style="height: 100px;width: 520px">
         <el-carousel height="100px" :interval="1000" >
             <el-carousel-item v-for="(image,index) in images" :key="index">
