@@ -2,6 +2,7 @@
     <template>
 
         <div class="topHead">
+
             <div >
             <div style="height: 30px;width: 30px">
                 <img src="@/assets/image/slh.png" alt="" style="height: 30px;width: 30px">
@@ -31,9 +32,11 @@
     <script>
 
 import moment from "moment";
+import RouterLink from "vant/es/mixins/router-link";
 const times = moment().format("hh:mm");
 export default {
-  data() {
+    components: {RouterLink},
+    data() {
     return {
       timess: times
     };

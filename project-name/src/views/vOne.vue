@@ -3,6 +3,7 @@
     <div>
         <div style="font-size: 18px;font-weight: 600">首页</div>
         <el-button @click="zHZX" type="primary" >综合资讯</el-button>
+        <el-button @click="dengLu">登录</el-button>
     <div style="height: 100px;width: 520px">
         <el-carousel height="100px" :interval="1000" >
             <el-carousel-item v-for="(image,index) in images" :key="index">
@@ -75,11 +76,16 @@ export default {
     }
 },
     methods:{
+      dengLu(){
+          const {$router}=this;
+          $router.push("first")
+      },
 www(){
     let that = this
     this.$http.post('/list')
         .then(function (res){
             that.list = res.data.data
+            console.error(res.data.data)
         }),console.error(that.list)
 
 },
@@ -94,6 +100,7 @@ www(){
         this.$http.post('/list')
             .then(function (res){
                 that.list = res.data.data
+                console.error(res.data.data)
             })
 
     }

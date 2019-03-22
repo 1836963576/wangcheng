@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Home.vue";
+import first from "./first.vue";
 import topBox from "./views/topBox.vue";
 import vOne from "./views/vOne.vue";
 import vSecend from "./views/vSecend.vue";
@@ -52,6 +52,11 @@ export default new Router({
       path: "/mainBox",
       name: "mainBox",
       component: mainBox
+    },
+    {
+      path:"/first",
+      name:"first",
+      component:first
     }
   ]
 });

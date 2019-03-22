@@ -1,4 +1,5 @@
 var Mock = require("mockjs");
+import denglu from "./denglu.js"
 const Random = Mock.Random;
 let i;
 const list = function() {
@@ -38,9 +39,6 @@ const lists = function() {
 
 const userMsg = function() {
   let useMsg = {
-    userName: Random.ctitle(3, 7),
-    useaddress: Random.city(true),
-    olds: Random.natural(10, 50),
     usePH: Random.dataImage("", "用户头像")
   };
   return {
@@ -52,4 +50,4 @@ const userMsg = function() {
 Mock.mock("/list", /post|get/i, list); //当post或get请求到/login路由时Mock会拦截请求并返回上面的数据
 Mock.mock("/Secends", /post|get/i, lists);
 Mock.mock("/userMsg", /post|get/i, userMsg);
-
+Mock.mock("/denglu",/post|get/i, denglu)
